@@ -1,0 +1,116 @@
+/* ===================================
+   Print Stylesheet - PDF Export
+   =================================== */
+
+@media print {
+    /* Reset page margins for A4 */
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+
+    /* Hide interactive elements */
+    .btn-print,
+    .footer {
+        display: none !important;
+    }
+
+    /* Force white background, black text */
+    * {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+
+    /* Preserve some color for key elements */
+    .section-title::after {
+        background-color: #2563eb !important;
+    }
+
+    .badge,
+    .tech-tag {
+        border: 1px solid #000 !important;
+    }
+
+    /* Page breaks */
+    .header,
+    .hero,
+    .profile-summary,
+    .featured-projects {
+        page-break-after: auto;
+    }
+
+    .ai-workflow {
+        page-break-before: always; /* Start page 2 here */
+    }
+
+    .project-card,
+    .experience-item,
+    .education-item {
+        page-break-inside: avoid;
+    }
+
+    /* Optimize layout for print */
+    .hero {
+        height: 200px !important;
+    }
+
+    .hero-tagline {
+        font-size: 18pt !important;
+    }
+
+    .name {
+        font-size: 28pt !important;
+    }
+
+    .section-title {
+        font-size: 20pt !important;
+    }
+
+    body {
+        font-size: 10pt !important;
+        line-height: 1.4 !important;
+    }
+
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* Ensure images print */
+    img {
+        max-width: 100%;
+        page-break-inside: avoid;
+    }
+
+    /* Remove video for print */
+    .video-container {
+        display: none !important;
+    }
+
+    /* Compact spacing for print */
+    section {
+        padding: 12pt 0 !important;
+    }
+
+    .space-2xl {
+        margin: 8pt !important;
+    }
+
+    /* Links: show URL */
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
+        color: #666 !important;
+    }
+
+    /* Workflow: horizontal even on print */
+    .workflow-diagram {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+    .workflow-step {
+        font-size: 8pt !important;
+    }
+}
