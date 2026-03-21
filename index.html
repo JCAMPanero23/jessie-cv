@@ -29,22 +29,51 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="header-text">
+                <div class="header-left">
                     <h1 class="name">JESSIE CAMPANERO</h1>
                     <p class="title">3D Visualizer | Architectural Visualization Specialist | AI Integration</p>
+                    <div class="contact-bar">
+                        <span class="contact-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            +971 50 938 7955
+                        </span>
+                        <span class="contact-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            JessieCampanero23@gmail.com
+                        </span>
+                        <span class="contact-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Dubai, UAE
+                        </span>
+                        <span class="contact-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                            <a href="https://www.linkedin.com/in/jessiecampanero" target="_blank" rel="noopener">LinkedIn</a>
+                        </span>
+                    </div>
                 </div>
-                <div class="header-photo">
+                <div class="header-right">
                     <img src="images/profile.jpg" alt="Jessie Campanero" class="profile-photo">
+                    <button class="btn-scroll-print" onclick="document.querySelector('.footer').scrollIntoView({behavior: 'smooth'})">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                            <rect x="6" y="14" width="12" height="8"></rect>
+                        </svg>
+                        Print
+                    </button>
                 </div>
-            </div>
-            <div class="contact-compact">
-                <span>+971 50 938 7955</span>
-                <span>•</span>
-                <span>JessieCampanero23@gmail.com</span>
-                <span>•</span>
-                <span>Dubai, UAE</span>
-                <span>•</span>
-                <a href="https://www.linkedin.com/in/jessiecampanero" target="_blank">LinkedIn</a>
             </div>
         </div>
     </header>
@@ -80,11 +109,15 @@
                 <!-- Project 1: Expo 2030 Balloon Pavilion -->
                 <article class="project-card featured">
                     <div class="project-media">
-                        <div class="image-gallery">
-                            <img src="images/portfolio-gallery/Expo 2030/Sequence1.jpg" alt="Expo 2030 Sequence 1" loading="lazy">
-                            <img src="images/portfolio-gallery/Expo 2030/Sequence2.jpg" alt="Expo 2030 Sequence 2" loading="lazy">
-                            <img src="images/portfolio-gallery/Expo 2030/Sequence3.jpg" alt="Expo 2030 Sequence 3" loading="lazy">
-                            <img src="images/portfolio-gallery/Expo 2030/Sequence4.jpg" alt="Expo 2030 Sequence 4" loading="lazy">
+                        <div class="video-container">
+                            <iframe
+                                src="https://drive.google.com/file/d/1ReAdCRFXN0HYIAjkUygT06gWwfspqopG/preview"
+                                title="Expo 2030 Balloon Pavilion Concept"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
                         </div>
                     </div>
                     <div class="project-content">
@@ -107,10 +140,8 @@
                 <article class="project-card">
                     <div class="project-media">
                         <div class="image-gallery">
-                            <img src="images/portfolio-gallery/Wadi Shoka/Wadi-shoka-pre-final_blender.jpg" alt="Wadi Shoka - Blender Pre-final" loading="lazy">
-                            <img src="images/portfolio-gallery/Wadi Shoka/Wadi-Shoka-AI_concept.jpg" alt="Wadi Shoka - AI Concept" loading="lazy">
-                            <img src="images/portfolio-gallery/Wadi Shoka/wadi-shoka_Site.jpg" alt="Wadi Shoka - Site Plan" loading="lazy">
-                            <img src="images/portfolio-gallery/Wadi Shoka/wadi-shoka_final_Ai enhance.jpg" alt="Wadi Shoka - Final AI Enhanced" loading="lazy">
+                            <img src="images/portfolio/wadi-shoka-1.jpg" alt="Wadi Shoka Camp - Multi-layered Alfresco Dining" loading="lazy">
+                            <img src="images/portfolio/wadi-shoka-2.jpg" alt="Wadi Shoka Camp - Natural Pool" loading="lazy">
                         </div>
                     </div>
                     <div class="project-content">
@@ -133,10 +164,8 @@
                 <article class="project-card">
                     <div class="project-media">
                         <div class="image-gallery">
-                            <img src="images/portfolio-gallery/Kalba Camp/kalba-camp-1.jpg" alt="Kalba Camp View 1" loading="lazy">
-                            <img src="images/portfolio-gallery/Kalba Camp/kalba-camp-2.jpg" alt="Kalba Camp View 2" loading="lazy">
-                            <img src="images/portfolio-gallery/Kalba Camp/kalba-camp-3.jpg" alt="Kalba Camp View 3" loading="lazy">
-                            <img src="images/portfolio-gallery/Kalba Camp/kalba-camp-4.jpg" alt="Kalba Camp View 4" loading="lazy">
+                            <img src="images/portfolio/kalba-camp-1.jpg" alt="Kalba Camp - Full 3D Design" loading="lazy">
+                            <img src="images/portfolio/kalba-camp-2.jpg" alt="Kalba Camp - Camp Layout" loading="lazy">
                         </div>
                     </div>
                     <div class="project-content">
@@ -161,7 +190,7 @@
                         <div class="project-badges">
                             <span class="badge">Personal Project</span>
                         </div>
-                        <h3 class="project-title">Restaurant Concept</h3>
+                        <h3 class="project-title">Jcamp Bistro</h3>
                         <p class="project-description">Contemporary restaurant concept demonstrating design capabilities and creative exploration. Personal codename work.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Blender</span>
@@ -408,6 +437,22 @@
             <div class="gallery-category">
                 <h2 class="gallery-category-title">Camp Designs</h2>
                 <div class="gallery-grid">
+                    <figure class="gallery-item">
+                        <img src="images/portfolio-gallery/camps/wadi-shoka-1.jpg" alt="Wadi Shoka Camp">
+                        <figcaption>Wadi Shoka Camp</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="images/portfolio-gallery/camps/wadi-shoka-2.jpg" alt="Wadi Shoka Camp View">
+                        <figcaption>Wadi Shoka Dining Area</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="images/portfolio-gallery/camps/kalba-camp-1.jpg" alt="Kalba Camp">
+                        <figcaption>Kalba Camp</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="images/portfolio-gallery/camps/kalba-camp-2.jpg" alt="Kalba Camp Layout">
+                        <figcaption>Kalba Camp Layout</figcaption>
+                    </figure>
                     <figure class="gallery-item">
                         <img src="images/portfolio-gallery/camps/PlatinumHeritage-P1camp_01.jpg" alt="Platinum Heritage P1">
                         <figcaption>Platinum Heritage P1</figcaption>

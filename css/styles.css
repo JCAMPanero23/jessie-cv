@@ -141,83 +141,34 @@ button {
 .header {
     background-color: var(--color-charcoal);
     color: #ffffff;
-    padding: var(--spacing-sm) 0;
+    padding: var(--spacing-md) 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-xs);
+    align-items: flex-start;
+    gap: var(--spacing-xl);
 }
 
-.header-text {
-    flex: 1;
-}
-
-.name {
-    font-size: var(--font-size-3xl);
-    font-weight: var(--font-weight-bold);
-    letter-spacing: 0.5px;
-    margin-bottom: 4px;
-    color: #ffffff;
-}
-
-.title {
-    font-size: var(--font-size-base);
-    color: var(--color-sand);
-    margin-bottom: 0;
-    font-weight: var(--font-weight-medium);
-}
-
-.header-photo {
-    flex-shrink: 0;
-}
-
-.profile-photo {
-    width: 80px;
-    height: 80px;
-    border-radius: var(--radius-full);
-    border: 2px solid var(--color-sand);
-    object-fit: cover;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.contact-compact {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-xs);
-    font-size: var(--font-size-sm);
-    color: rgba(255, 255, 255, 0.9);
-    align-items: center;
-}
-
-.contact-compact a {
-    color: var(--color-sand);
-    transition: color 0.3s ease;
-}
-
-.contact-compact a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-.contact-compact span {
-    white-space: nowrap;
-}
-
-/* Old header styles - kept for backwards compatibility */
 .header-left {
     flex: 1;
 }
 
-.header-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-md);
+.name {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.5px;
+    margin-bottom: var(--spacing-xs);
+    color: #ffffff;
+}
+
+.title {
+    font-size: var(--font-size-lg);
+    color: var(--color-sand);
+    margin-bottom: var(--spacing-md);
+    font-weight: var(--font-weight-medium);
 }
 
 .contact-bar {
@@ -241,6 +192,21 @@ button {
 .contact-item a:hover {
     color: #ffffff;
     text-decoration: underline;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: var(--radius-full);
+    border: 3px solid var(--color-sand);
+    object-fit: cover;
 }
 
 .btn-print {
@@ -930,23 +896,14 @@ button {
         text-align: center;
     }
 
-    .header-text {
-        text-align: center;
-    }
-
-    .contact-compact {
-        justify-content: center;
-        text-align: center;
-    }
-
     .contact-bar {
         flex-direction: column;
         gap: var(--spacing-sm);
     }
 
     .profile-photo {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 
     .hero {
