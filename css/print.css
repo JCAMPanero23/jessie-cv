@@ -304,38 +304,59 @@
         margin-bottom: 10pt;
     }
 
-    /* Portfolio Thumbnails - KEEP VISIBLE */
+    /* Hide old portfolio thumbnails section */
     .portfolio-thumbnails {
-        page-break-before: always; /* New page for gallery */
-        background-color: #f8f8f8 !important;
-        padding: 12pt;
+        display: none !important;
     }
 
-    .thumbnails-grid {
+    /* Portfolio Gallery - Print Only */
+    .portfolio-gallery-print {
+        display: block !important; /* Show in print */
+    }
+
+    .gallery-category {
+        page-break-before: always; /* Each category starts on new page */
+        page-break-after: auto;
+        margin-bottom: 20pt;
+    }
+
+    .gallery-category-title {
+        font-size: 18pt;
+        font-weight: bold;
+        color: #1e293b !important;
+        margin-bottom: 15pt;
+        padding-bottom: 8pt;
+        border-bottom: 3px solid #D4A574 !important;
+    }
+
+    .gallery-grid {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10pt;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 12pt;
+        margin-bottom: 15pt;
     }
 
-    .thumbnail-item {
+    .gallery-item {
         page-break-inside: avoid;
         background-color: white !important;
-        padding: 5pt;
         border: 1px solid #ddd !important;
+        padding: 6pt;
     }
 
-    .thumbnail-item img {
+    .gallery-item img {
         width: 100% !important;
         height: auto !important;
-        max-height: 120px !important;
+        max-height: 180px !important;
         object-fit: cover !important;
+        border: 1px solid #e0e0e0 !important;
+        margin-bottom: 4pt;
     }
 
-    .thumbnail-item figcaption {
-        font-size: 8pt;
+    .gallery-item figcaption {
+        font-size: 9pt;
         text-align: center;
-        margin-top: 4pt;
         color: #4a4a4a !important;
+        font-weight: 500;
     }
 
     /* Links: show URL */

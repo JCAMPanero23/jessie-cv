@@ -871,6 +871,14 @@ button {
     color: white;
 }
 
+/* ===================================
+   Portfolio Gallery - Print Only
+   =================================== */
+
+.portfolio-gallery-print {
+    display: none; /* Hidden on web */
+}
+
 /* ==========================================
    RESPONSIVE STYLES - MOBILE
    ========================================== */
