@@ -38,31 +38,80 @@
         color: #D4A574 !important; /* Professional title in sand */
     }
 
-    /* Header styling */
+    /* Header styling - Compact like Standard CV */
     .header {
-        background-color: #3a3a3a !important;
-        color: white !important;
-        padding: 15pt;
+        background-color: white !important;
+        color: #1e293b !important;
+        padding: 10pt 0;
         margin-bottom: 10pt;
+        border-bottom: 2px solid #D4A574 !important;
+    }
+
+    .header-content {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 6pt;
+    }
+
+    .header-left {
+        flex: 1;
     }
 
     .name {
-        color: white !important;
-        font-size: 24pt;
-        margin-bottom: 5pt;
+        color: #1e293b !important;
+        font-size: 20pt;
+        margin-bottom: 3pt;
+        font-weight: bold;
     }
 
+    .title {
+        color: #D4A574 !important;
+        font-size: 10pt;
+        margin-bottom: 0;
+    }
+
+    /* Hide SVG icons in print */
+    .contact-item svg,
+    .contact-item .icon {
+        display: none !important;
+    }
+
+    /* Compact contact bar - single line with bullets */
     .contact-bar {
-        color: white !important;
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 4pt;
+        font-size: 9pt;
+        color: #4a4a4a !important;
+        margin-top: 6pt;
     }
 
     .contact-item {
-        color: white !important;
+        color: #4a4a4a !important;
         font-size: 9pt;
+        white-space: nowrap;
     }
 
+    .contact-item:not(:last-child)::after {
+        content: " •";
+        margin-left: 4pt;
+        color: #4a4a4a !important;
+    }
+
+    .contact-item a {
+        color: #D4A574 !important;
+    }
+
+    /* Smaller profile photo */
     .profile-photo {
-        border-color: #D4A574 !important;
+        width: 60px !important;
+        height: 60px !important;
+        border: 2px solid #D4A574 !important;
+    }
+
+    .header-right {
+        flex-shrink: 0;
     }
 
     /* Hero section - keep visible */
