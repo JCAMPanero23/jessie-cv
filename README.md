@@ -4,7 +4,7 @@ Professional CV website showcasing 10+ years of architectural visualization expe
 
 ## 🚀 Live Site
 
-[View Live CV](https://username.github.io/jessie-cv) *(Update after deployment)*
+[View Live CV](https://jcampanero23.github.io/jessie-cv)
 
 ## 📋 Features
 
@@ -27,10 +27,14 @@ Professional CV website showcasing 10+ years of architectural visualization expe
 ### GitHub Pages Setup
 
 1. Create new repository on GitHub (name: `jessie-cv`)
-2. Clone repository locally or add remote to existing project
-3. Commit and push all files
-4. Enable GitHub Pages in Settings → Pages → main branch
-5. Access at: `https://username.github.io/jessie-cv`
+2. Push all files to GitHub:
+   ```bash
+   git remote add origin https://github.com/JCAMPanero23/jessie-cv.git
+   git branch -M main
+   git push -u origin main
+   ```
+3. Enable GitHub Pages in Settings → Pages → Deploy from main branch
+4. Access at: `https://jcampanero23.github.io/jessie-cv`
 
 ### Local Development
 

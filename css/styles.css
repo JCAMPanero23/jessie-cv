@@ -732,25 +732,10 @@ button {
 }
 
 /* ==========================================
-   PRINT SECTION (BOTTOM)
+   SCROLL TO PRINT BUTTON (HEADER)
    ========================================== */
 
-.print-section {
-    padding: var(--spacing-2xl) 0;
-    background-color: var(--color-off-white);
-    text-align: center;
-}
-
-.print-buttons {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-lg);
-    flex-wrap: wrap;
-}
-
-.btn-scroll-print,
-.btn-print-portfolio,
-.btn-standard-cv-link {
+.btn-scroll-print {
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-xs);
@@ -764,30 +749,11 @@ button {
     transition: all 0.3s ease;
 }
 
-.btn-scroll-print:hover,
-.btn-print-portfolio:hover,
-.btn-standard-cv-link:hover {
+.btn-scroll-print:hover {
     background-color: var(--color-terracotta);
     border-color: var(--color-terracotta);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.btn-standard-cv-link {
-    background-color: transparent;
-    color: var(--color-sand);
-}
-
-.btn-standard-cv-link:hover {
-    background-color: var(--color-sand);
-    color: white;
-}
-
-/* Hide print section when printing */
-@media print {
-    .print-section {
-        display: none !important;
-    }
 }
 
 /* ==========================================
@@ -852,6 +818,59 @@ button {
     color: rgba(255, 255, 255, 0.7);
 }
 
+/* Footer Download Buttons */
+.footer-downloads {
+    text-align: center;
+}
+
+.footer-downloads h3 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+    color: #D4A574; /* Sand color */
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.btn-footer-portfolio,
+.btn-footer-standard {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: #D4A574;
+    color: white;
+    border: 2px solid #D4A574;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-footer-portfolio:hover,
+.btn-footer-standard:hover {
+    background-color: #C4956F;
+    border-color: #C4956F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-footer-standard {
+    background-color: transparent;
+    color: #D4A574;
+}
+
+.btn-footer-standard:hover {
+    background-color: #D4A574;
+    color: white;
+}
+
 /* ==========================================
    RESPONSIVE STYLES - MOBILE
    ========================================== */
@@ -913,15 +932,15 @@ button {
         grid-template-columns: 1fr;
     }
 
-    .print-buttons {
+    .footer-buttons {
         flex-direction: column;
         align-items: center;
     }
 
-    .btn-print-portfolio,
-    .btn-standard-cv-link {
+    .btn-footer-portfolio,
+    .btn-footer-standard {
         width: 100%;
-        max-width: 300px;
+        max-width: 250px;
     }
 }
 
