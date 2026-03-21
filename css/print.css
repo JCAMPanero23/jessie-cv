@@ -309,6 +309,31 @@
         display: none !important;
     }
 
+    /* Hide web version of featured projects in print */
+    .featured-projects {
+        display: none !important; /* Hide web version */
+    }
+
+    .featured-projects-print {
+        display: block !important; /* Show print version */
+    }
+
+    /* Style for print image galleries */
+    .image-gallery-print {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8pt;
+        margin-bottom: 10pt;
+    }
+
+    .image-gallery-print img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 200px !important;
+        object-fit: cover !important;
+        border: 1px solid #ddd !important;
+    }
+
     /* Portfolio Gallery - Print Only */
     .portfolio-gallery-print {
         display: block !important; /* Show in print */

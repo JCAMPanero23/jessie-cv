@@ -879,6 +879,11 @@ button {
     display: none; /* Hidden on web */
 }
 
+/* Print-only featured projects - Hidden on web */
+.featured-projects-print {
+    display: none;
+}
+
 /* ==========================================
    RESPONSIVE STYLES - MOBILE
    ========================================== */
