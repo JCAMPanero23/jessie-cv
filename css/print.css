@@ -38,20 +38,19 @@
         color: #D4A574 !important; /* Professional title in sand */
     }
 
-    /* Header styling - Compact like Standard CV */
+    /* Header styling - Compact with photo on right */
     .header {
-        background-color: white !important;
-        color: #1e293b !important;
-        padding: 10pt 0;
+        background-color: #3a3a3a !important; /* Black background */
+        color: white !important;
+        padding: 12pt;
         margin-bottom: 10pt;
-        border-bottom: 2px solid #D4A574 !important;
     }
 
     .header-content {
         display: flex !important;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 6pt;
+        gap: 10pt;
     }
 
     .header-left {
@@ -59,16 +58,16 @@
     }
 
     .name {
-        color: #1e293b !important;
+        color: white !important;
         font-size: 20pt;
-        margin-bottom: 3pt;
+        margin-bottom: 4pt;
         font-weight: bold;
     }
 
     .title {
         color: #D4A574 !important;
         font-size: 10pt;
-        margin-bottom: 0;
+        margin-bottom: 6pt;
     }
 
     /* Hide SVG icons in print */
@@ -83,12 +82,11 @@
         flex-wrap: wrap;
         gap: 4pt;
         font-size: 9pt;
-        color: #4a4a4a !important;
-        margin-top: 6pt;
+        color: white !important;
     }
 
     .contact-item {
-        color: #4a4a4a !important;
+        color: white !important;
         font-size: 9pt;
         white-space: nowrap;
     }
@@ -96,29 +94,29 @@
     .contact-item:not(:last-child)::after {
         content: " •";
         margin-left: 4pt;
-        color: #4a4a4a !important;
+        color: white !important;
     }
 
     .contact-item a {
         color: #D4A574 !important;
     }
 
-    /* Smaller profile photo */
-    .profile-photo {
-        width: 60px !important;
-        height: 60px !important;
-        border: 2px solid #D4A574 !important;
-    }
-
+    /* Profile photo on right side */
     .header-right {
         flex-shrink: 0;
     }
 
+    .profile-photo {
+        width: 70px !important;
+        height: 70px !important;
+        border: 2px solid #D4A574 !important;
+    }
+
     /* Hero section - keep visible */
     .hero {
-        height: 250px !important;
+        height: 180px !important; /* Reduced from 250px */
         page-break-after: avoid;
-        margin-bottom: 15pt;
+        margin-bottom: 10pt;
     }
 
     .hero-tagline {
@@ -129,7 +127,7 @@
     /* Section spacing */
     section {
         page-break-inside: avoid;
-        margin-bottom: 15pt;
+        margin-bottom: 10pt; /* Reduced from 15pt */
     }
 
     .container {
@@ -141,7 +139,7 @@
     .profile-summary {
         background-color: #f8f8f8 !important;
         padding: 12pt;
-        margin-bottom: 15pt;
+        margin-bottom: 10pt;
     }
 
     .summary-content p {
@@ -157,7 +155,7 @@
 
     .project-card {
         page-break-inside: avoid;
-        margin-bottom: 20pt;
+        margin-bottom: 12pt; /* Reduced from 20pt */
         border: 1px solid #e0e0e0 !important;
         padding: 10pt;
         background-color: #fafafa !important;
@@ -391,7 +389,7 @@
     .gallery-category {
         page-break-before: always; /* Each category starts on new page */
         page-break-after: auto;
-        margin-bottom: 20pt;
+        margin-bottom: 12pt; /* Reduced from 20pt */
     }
 
     .gallery-category-title {
