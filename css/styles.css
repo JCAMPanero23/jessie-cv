@@ -141,7 +141,7 @@ button {
 .header {
     background-color: var(--color-charcoal);
     color: #ffffff;
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-md) 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -732,6 +732,65 @@ button {
 }
 
 /* ==========================================
+   PRINT SECTION (BOTTOM)
+   ========================================== */
+
+.print-section {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--color-off-white);
+    text-align: center;
+}
+
+.print-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.btn-scroll-print,
+.btn-print-portfolio,
+.btn-standard-cv-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--color-sand);
+    color: white;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    border: 2px solid var(--color-sand);
+    transition: all 0.3s ease;
+}
+
+.btn-scroll-print:hover,
+.btn-print-portfolio:hover,
+.btn-standard-cv-link:hover {
+    background-color: var(--color-terracotta);
+    border-color: var(--color-terracotta);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-standard-cv-link {
+    background-color: transparent;
+    color: var(--color-sand);
+}
+
+.btn-standard-cv-link:hover {
+    background-color: var(--color-sand);
+    color: white;
+}
+
+/* Hide print section when printing */
+@media print {
+    .print-section {
+        display: none !important;
+    }
+}
+
+/* ==========================================
    FOOTER SECTION
    ========================================== */
 
@@ -852,6 +911,17 @@ button {
 
     .thumbnails-grid {
         grid-template-columns: 1fr;
+    }
+
+    .print-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-print-portfolio,
+    .btn-standard-cv-link {
+        width: 100%;
+        max-width: 300px;
     }
 }
 
