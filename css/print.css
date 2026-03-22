@@ -287,11 +287,21 @@
     }
 
     .workflow-arrow {
-        font-size: 16pt;
+        font-size: 0; /* Hide original content */
         color: #D4A574 !important;
         flex-shrink: 0;
         line-height: 1;
         align-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20pt;
+    }
+
+    .workflow-arrow::before {
+        content: "→"; /* Force rightward arrow */
+        font-size: 20pt;
+        display: block;
     }
 
     .workflow-note {
