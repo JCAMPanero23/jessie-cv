@@ -46,7 +46,7 @@ Using web-optimized images from `images/portfolio-gallery/`:
 2. **Tethered Balloon Experiences** → Desert Rock Scene 2 (`balloons-tethered/desert-rock-balloon2.jpg`)
 3. **Thermal Airship Proposals** → Hermes Airship Scene 2 (`balloons-thermal/Hermes-airshipAtDesertRock_scene-2.jpg`)
 4. **Events** → Citrix (2) (`events-commercial/Citrix-(2).jpg`)
-5. **Commercials** → RK Trends (`events-commercial/RK-Trends_jewelry-(1).jpg` or similar)
+5. **Commercials** → RK Trends (`events-commercial/RK-Trends_jewelry-(1).jpg`)
 6. **Residential & Office Interiors** → Bedroom (`Residential and office/Bedroom01.jpg`)
 
 ### Modal Gallery Design
@@ -105,7 +105,7 @@ Using web-optimized images from `images/portfolio-gallery/`:
           </div>
         </div>
         <h3 class="category-title">Camp Designs</h3>
-        <p class="category-count">8 projects</p>
+        <p class="category-count">12 projects</p>
       </article>
       <!-- repeat for other 5 categories -->
     </div>
@@ -196,14 +196,18 @@ const portfolioCategories = {
   camps: {
     title: 'Camp Designs',
     preview: 'images/portfolio-gallery/camps/Elephant-rock-camp-01.jpg',
+    count: 12,
     images: [
-      { src: 'images/portfolio-gallery/camps/...', alt: '...' },
-      // ... all camp images
+      { src: 'images/portfolio-gallery/camps/Elephant-rock-camp-01.jpg', alt: 'Elephant Rock Camp Scene 1' },
+      { src: 'images/portfolio-gallery/camps/Elephant-rock-camp-02.jpg', alt: 'Elephant Rock Camp Scene 2' },
+      // ... all 12 camp images
     ]
   },
-  // ... other 5 categories
+  // ... other 5 categories with their respective counts (6, 6, 4, 6, 3)
 };
 ```
+
+**Alt Text Pattern:** Use descriptive text based on filename: `[Project Name] [Descriptor]` (e.g., "Elephant Rock Camp Scene 1", "Hermes Airship Scene 2", "RK Trends Jewelry Display")
 
 **Module Structure:**
 ```javascript
@@ -315,15 +319,64 @@ Print version continues using existing `portfolio-gallery-print` section which s
 **Source Folders:**
 All images from `images/portfolio-gallery/` subdirectories:
 
-1. **camps/** → Camp Designs category
-2. **balloons-tethered/** → Tethered Balloon Experiences
-3. **balloons-thermal/** → Thermal Airship Proposals
-4. **events-commercial/** → Split between Events and Commercials categories
-5. **Residential and office/** → Residential & Office Interiors
+1. **camps/** → Camp Designs category (12 images)
+2. **balloons-tethered/** → Tethered Balloon Experiences (6 images)
+3. **balloons-thermal/** → Thermal Airship Proposals (6 images)
+4. **events-commercial/** → Split between Events (4 images) and Commercials (6 images)
+5. **Residential and office/** → Residential & Office Interiors (3 images)
 
-**Image Assignment Logic:**
-- Events: Event-specific images from events-commercial (Citrix, UEFA, balloon domes, WTC, etc.)
-- Commercials: Commercial/retail from events-commercial (RK Trends, Hero Kiosk, Jcamp Bistro, Conference room)
+**Note:** Additional folders `Kalba Camp/`, `Wadi Shoka/`, and `Expo 2030/` exist in portfolio-gallery but are NOT included in these categories (Kalba and Wadi Shoka images are already represented in camps/, Expo 2030 is in featured projects section).
+
+### Complete Category-to-Image Mapping
+
+**1. Camp Designs (12 images, from camps/ folder):**
+- AbuDhabi_IslandCamp1.jpg
+- Elephant-rock-camp-01.jpg (preview image)
+- Elephant-rock-camp-02.jpg
+- kalba-camp-1.jpg
+- kalba-camp-2.jpg
+- PlatinumHeritage-P1camp_01.jpg
+- PlatinumHeritage-P1camp_02.jpg
+- PlatinumHeritage-P2camp_01.jpg
+- PlatinumHeritage-P2camp_02.jpg
+- Sheraan-Dining-experince-01.jpg
+- wadi-shoka-1.jpg
+- wadi-shoka-2.jpg
+
+**2. Tethered Balloon Experiences (6 images, from balloons-tethered/ folder):**
+- desert-rock-balloon.jpg
+- desert-rock-balloon2.jpg (preview image)
+- dubai-balloon at atlantis1.jpg
+- dubai-balloon-at-atlantis2.jpg
+- Qiddiya-Speed-park1.jpg
+- Yas-Marina_LV-Balloon.jpg
+
+**3. Thermal Airship Proposals (6 images, from balloons-thermal/ folder):**
+- Hermes-airshipAtDesertRock_scene-1.jpg
+- Hermes-airshipAtDesertRock_scene-2.jpg (preview image)
+- Hermes-airshipAtDesertRock_scene-3.jpg
+- RedSea-airshipAtDesertRock_scene-1.jpg
+- RedSea-airshipAtDesertRock_scene-2.jpg
+- RedSea-airshipAtDesertRock_scene-3.jpg
+
+**4. Events (4 images, from events-commercial/ folder):**
+- Citrix-(2).jpg (preview image)
+- Dubai-Balloon-Kiosk.jpg
+- Hero_Kiosk_Mall.jpg
+- Hot-air-Balloon-at-World-trade.jpg
+
+**5. Commercials (6 images, from events-commercial/ folder):**
+- RK-Trends_jewelry-(1).jpg (preview image)
+- RK-Trends_jewelry-(2).jpg
+- RK-Trends_jewelry-_AI-enhance.jpg
+- Jcamp-Bistro_AI-enhance.jpg
+- jcamp-bistro-1.jpg
+- jcamp-bistro-2.jpg
+
+**6. Residential & Office Interiors (3 images, from Residential and office/ folder):**
+- Bedroom01.jpg (preview image)
+- Royal-majlis.jpg
+- Conference-room.jpg
 
 ## Browser Support
 
