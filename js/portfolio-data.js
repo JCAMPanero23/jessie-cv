@@ -80,7 +80,7 @@ const portfolioCategories = {
     images: [
       { src: 'images/portfolio-gallery/Residential and office/Bedroom01.jpg', alt: 'Luxury Bedroom Design' },
       { src: 'images/portfolio-gallery/Residential and office/Royal-majlis.jpg', alt: 'Royal Majlis Interior' },
-      { src: 'images/portfolio-gallery/Residential and office/Conference-room.png', alt: 'Conference Room Design' }
+      { src: 'images/portfolio-gallery/Residential and office/Conference-room.jpg', alt: 'Conference Room Design' }
     ]
   }
 };
