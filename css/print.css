@@ -105,7 +105,7 @@
 
     /* Hero section - keep visible */
     .hero {
-        height: 180px !important; /* Reduced from 250px */
+        height: 250px !important; /* Reduced from 250px */
         page-break-after: avoid;
         margin-bottom: 10pt;
     }
@@ -164,7 +164,7 @@
 
     /* Show project images - FULL SIZE */
     .project-media {
-        margin-bottom: 10pt;
+        margin-bottom: 2pt;
     }
 
     .image-gallery {
@@ -227,9 +227,10 @@
     .ai-workflow {
         background-color: #f8f8f8 !important;
         padding: 10pt;
-        page-break-inside: auto; /* Allow break if needed */
-        page-break-after: auto;
-        margin-bottom: 6pt !important;
+        page-break-before: always; /* Force to new page */
+        page-break-inside: avoid; /* Keep section together */
+        page-break-after: avoid;
+        margin-bottom: 0pt !important;
     }
 
     .workflow-diagram {
@@ -356,6 +357,8 @@
     /* Work Experience */
     .work-experience {
         page-break-before: auto;
+        margin-top: 0pt;
+        padding-top: 8pt;
     }
 
     .experience-item {
@@ -381,6 +384,8 @@
     .software-proficiency {
         background-color: #f8f8f8 !important;
         padding: 12pt;
+        margin-bottom: 0pt;
+        page-break-after: avoid;
     }
 
     .skills-grid {
@@ -418,13 +423,44 @@
     /* Education */
     .education {
         page-break-inside: avoid;
+        margin-top: 0pt;
+        padding-top: 6pt;
     }
 
     .education-item {
         background-color: white !important;
         border-left: 3px solid #D4A574 !important;
-        padding: 10pt;
-        margin-bottom: 10pt;
+        padding: 6pt;
+        margin-bottom: 3pt;
+    }
+
+    .education-title {
+        font-size: 11pt;
+        color: #1e293b !important;
+        margin-bottom: 0pt;
+    }
+
+    .education-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 8pt;
+        margin-bottom: 3pt;
+    }
+
+    .education-date {
+        font-size: 9pt;
+        flex-shrink: 0;
+    }
+
+    .education-institution {
+        font-size: 9pt;
+        margin-bottom: 2pt;
+    }
+
+    .education-details {
+        font-size: 8pt;
+        margin-bottom: 0pt;
     }
 
     /* Hide old portfolio thumbnails section */
@@ -445,16 +481,19 @@
     .image-gallery-print {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr);
-        gap: 8pt;
-        margin-bottom: 10pt;
+        gap: 6pt;
+        margin-bottom: 4pt;
+        justify-items: center;
+        align-items: center;
     }
 
     .image-gallery-print img {
         width: 100% !important;
-        height: auto !important;
-        max-height: 200px !important;
+        height: 220px !important;
         object-fit: cover !important;
+        object-position: center center !important;
         border: 1px solid #ddd !important;
+        display: block !important;
     }
 
     /* Portfolio Gallery - Print Only */
