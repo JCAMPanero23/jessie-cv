@@ -1,64 +1,53 @@
 # Known Issues
 
-## Full Portfolio PDF - AI Workflow Arrows Display Vertically
+## ~~Full Portfolio PDF - AI Workflow Arrows Display Vertically~~ (RESOLVED)
 
-**Status:** Open
+**Status:** Resolved
 **Priority:** Medium
 **Date Reported:** 2026-03-22
+**Date Resolved:** 2026-03-22
 
 ### Issue Description
-The arrows between workflow boxes in the "AI-Integrated Workflow" section display as downward arrows (↓) instead of horizontal rightward arrows (→) when printing the Full Portfolio PDF.
+The arrows between workflow boxes in the "AI-Integrated Workflow" section displayed as downward arrows (↓) instead of horizontal rightward arrows (→) when printing the Full Portfolio PDF.
 
-### Expected Behavior
-- Arrows should display horizontally: Box 1 → Box 2 → Box 3 → Box 4
+### Root Cause
+Unicode arrow characters (→) are subject to font rendering and PDF engine interpretation, which can cause them to render incorrectly in print output. The character itself may be substituted by fallback fonts or rendered based on text-direction heuristics.
 
-### Actual Behavior
-- Arrows display vertically pointing downward between boxes
+### Solution
+Replaced Unicode arrow character with CSS border-based triangle arrows. This approach:
+- Uses pure CSS geometry (no font dependency)
+- Renders consistently across all browsers and PDF engines
+- Creates a clean triangular arrow pointing right
 
-### Attempted Fixes
-1. Added `writing-mode: horizontal-tb !important`
-2. Added `transform: rotate(0deg) !important`
-3. Used CSS `::before` pseudo-element with `content: "→"`
-4. Set explicit font-size and display properties
-5. Adjusted flexbox alignment properties
-
-### Current CSS (print.css lines ~260-272)
+### Final CSS (print.css)
 ```css
 .workflow-arrow {
-    font-size: 0;
-    color: #D4A574 !important;
+    font-size: 0; /* Hide original text content */
     flex-shrink: 0;
-    line-height: 1;
     align-self: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20pt;
+    display: block;
+    width: 0;
+    height: 0;
+    /* CSS border triangle pointing right */
+    border-top: 8pt solid transparent;
+    border-bottom: 8pt solid transparent;
+    border-left: 12pt solid #D4A574;
+    margin: 0 4pt;
 }
 
 .workflow-arrow::before {
-    content: "→";
-    font-size: 20pt;
-    display: block;
+    content: none; /* Remove pseudo-element */
 }
 ```
 
-### HTML Structure (index.html lines ~346-358)
-```html
-<div class="workflow-arrow">→</div>
-```
-
-### Next Steps to Try
-1. Replace arrow character with HTML entity (`&rarr;` or `&#8594;`)
-2. Use SVG arrow instead of text character
-3. Use border-based arrow (CSS triangle)
-4. Try different Unicode characters (⟶, ⇒, ➔)
-5. Check if font-family affects arrow rendering in print
-6. Test with explicit `direction: ltr` property
-7. Consider using background-image with arrow graphic
+### Attempted Fixes (Before Resolution)
+1. Added `writing-mode: horizontal-tb !important` - Did not work
+2. Added `transform: rotate(0deg) !important` - Did not work
+3. Used CSS `::before` pseudo-element with `content: "→"` - Did not work
+4. Set explicit font-size and display properties - Did not work
+5. Adjusted flexbox alignment properties - Did not work
 
 ### Notes
-- Web version displays correctly
-- Only affects print/PDF output
-- All other workflow styling (boxes, spacing, rounded corners) working correctly
-- Issue may be browser-specific print rendering
+- Web version always displayed correctly (font rendering works in browser)
+- Issue only affected print/PDF output
+- CSS border triangles are a reliable cross-platform solution for arrows
