@@ -48,13 +48,16 @@
 
     .header-content {
         display: flex !important;
+        flex-direction: row !important; /* Force horizontal layout */
         justify-content: space-between;
         align-items: center;
         gap: 10pt;
+        text-align: left !important; /* Override mobile center alignment */
     }
 
     .header-left {
         flex: 1;
+        text-align: left !important; /* Ensure left alignment */
     }
 
     .name {
@@ -82,11 +85,12 @@
         flex-wrap: wrap;
         gap: 4pt;
         font-size: 9pt;
-        color: white !important;
+        color: #ffffff !important;
     }
 
     .contact-item {
-        color: white !important;
+        display: inline !important; /* Override any flex properties */
+        color: #ffffff !important;
         font-size: 9pt;
         white-space: nowrap;
     }
@@ -94,23 +98,28 @@
     .contact-item:not(:last-child)::after {
         content: " •";
         margin-left: 4pt;
-        color: white !important;
+        color: #ffffff !important;
     }
 
     .contact-item a {
         color: #ffffff !important; /* White for readability on dark background */
+        text-decoration: none !important;
     }
 
     /* Profile photo on right side */
     .header-right {
-        flex-shrink: 0;
+        flex-shrink: 0 !important;
         flex-direction: row !important; /* Override column layout from web CSS */
+        display: block !important; /* Simple block display for just the image */
+        align-items: flex-start !important;
     }
 
     .profile-photo {
         width: 70px !important;
         height: 70px !important;
         border: 2px solid #D4A574 !important;
+        border-radius: 50% !important;
+        display: block !important;
     }
 
     /* Hero section - keep visible */
