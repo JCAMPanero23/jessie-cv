@@ -26,14 +26,16 @@ const portfolioCategories = {
   tetheredBalloons: {
     title: 'Tethered Balloon Experiences',
     preview: 'images/portfolio-gallery/balloons-tethered/desert-rock-balloon2.jpg',
-    count: 6,
+    count: 8,
     images: [
       { src: 'images/portfolio-gallery/balloons-tethered/desert-rock-balloon.jpg', alt: 'Desert Rock Balloon Scene 1' },
       { src: 'images/portfolio-gallery/balloons-tethered/desert-rock-balloon2.jpg', alt: 'Desert Rock Balloon Scene 2' },
       { src: 'images/portfolio-gallery/balloons-tethered/dubai-balloon at atlantis1.jpg', alt: 'Dubai Balloon at Atlantis Scene 1' },
       { src: 'images/portfolio-gallery/balloons-tethered/dubai-balloon-at-atlantis2.jpg', alt: 'Dubai Balloon at Atlantis Scene 2' },
       { src: 'images/portfolio-gallery/balloons-tethered/Qiddiya-Speed-park1.jpg', alt: 'Qiddiya Speed Park Balloon' },
-      { src: 'images/portfolio-gallery/balloons-tethered/Yas-Marina_LV-Balloon.jpg', alt: 'Yas Marina LV Balloon' }
+      { src: 'images/portfolio-gallery/balloons-tethered/Yas-Marina_LV-Balloon.jpg', alt: 'Yas Marina LV Balloon' },
+      { src: 'images/portfolio-gallery/Expo 2030/Sequence3.jpg', alt: 'Expo 2030 Tethered Balloon Sequence 3' },
+      { src: 'images/portfolio-gallery/Expo 2030/Sequence4.jpg', alt: 'Expo 2030 Tethered Balloon Sequence 4' }
     ]
   },
   thermalAirships: {

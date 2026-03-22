@@ -18,3 +18,23 @@ dist/
 
 # Local env
 .env
+
+# Personal files
+Jessie CV.pdf
+Jessie Campanero*.pdf
+Jessie ID photo.jpg
+Jessie_Drone_Portfolio.pptx
+Screenshot.png
+portfolio images and video links.txt
+
+# Source/Rendered images (not used on website)
+Rendered images/
+
+# Development files
+.claude/
+.superpowers/
+Debug/
+
+# Old specs/plans
+docs/superpowers/plans/2026-03-19-*.md
+docs/superpowers/specs/2026-03-19-*.md
