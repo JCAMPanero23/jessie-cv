@@ -10,11 +10,17 @@
         margin: 15mm;
     }
 
-    /* Hide interactive elements */
+    /* Hide web version elements */
+    .header,
     .btn-scroll-print,
     .print-section,
     .footer {
         display: none !important;
+    }
+
+    /* Show print-only header */
+    .header-print {
+        display: block !important;
     }
 
     /* Keep white background but allow some colors */
@@ -38,88 +44,60 @@
         color: #D4A574 !important; /* Professional title in sand */
     }
 
-    /* Header styling - Compact with photo on right */
-    .header {
-        background-color: #3a3a3a !important; /* Black background */
-        color: white !important;
+    /* Print-only Header - Clean layout with photo on right */
+    .header-print {
+        background-color: #3a3a3a;
+        color: #ffffff;
         padding: 12pt;
         margin-bottom: 10pt;
     }
 
-    .header-content {
-        display: flex !important;
-        flex-direction: row !important; /* Force horizontal layout */
+    .header-print-content {
+        display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 10pt;
-        text-align: left !important; /* Override mobile center alignment */
+        gap: 15pt;
     }
 
-    .header-left {
+    .header-print-left {
         flex: 1;
-        text-align: left !important; /* Ensure left alignment */
     }
 
-    .name {
-        color: white !important;
+    .header-print-name {
+        color: #ffffff;
         font-size: 20pt;
-        margin-bottom: 4pt;
         font-weight: bold;
+        margin: 0 0 4pt 0;
+        letter-spacing: 0.5px;
     }
 
-    .title {
-        color: #D4A574 !important;
+    .header-print-title {
+        color: #D4A574;
         font-size: 10pt;
-        margin-bottom: 6pt;
+        margin: 0 0 6pt 0;
     }
 
-    /* Hide SVG icons in print */
-    .contact-item svg,
-    .contact-item .icon {
-        display: none !important;
-    }
-
-    /* Compact contact bar - single line with bullets */
-    .contact-bar {
-        display: flex !important;
-        flex-wrap: wrap;
-        gap: 4pt;
+    .header-print-contact {
         font-size: 9pt;
-        color: #ffffff !important;
+        color: #ffffff;
+        line-height: 1.4;
     }
 
-    .contact-item {
-        display: inline !important; /* Override any flex properties */
-        color: #ffffff !important;
-        font-size: 9pt;
-        white-space: nowrap;
+    .header-print-contact span {
+        color: #ffffff;
+        margin-right: 4pt;
     }
 
-    .contact-item:not(:last-child)::after {
-        content: " •";
-        margin-left: 4pt;
-        color: #ffffff !important;
+    .header-print-right {
+        flex-shrink: 0;
     }
 
-    .contact-item a {
-        color: #ffffff !important; /* White for readability on dark background */
-        text-decoration: none !important;
-    }
-
-    /* Profile photo on right side */
-    .header-right {
-        flex-shrink: 0 !important;
-        flex-direction: row !important; /* Override column layout from web CSS */
-        display: block !important; /* Simple block display for just the image */
-        align-items: flex-start !important;
-    }
-
-    .profile-photo {
-        width: 70px !important;
-        height: 70px !important;
-        border: 2px solid #D4A574 !important;
-        border-radius: 50% !important;
-        display: block !important;
+    .header-print-photo {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 2px solid #D4A574;
+        object-fit: cover;
     }
 
     /* Hero section - keep visible */

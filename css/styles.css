@@ -879,8 +879,9 @@ button {
     display: none; /* Hidden on web */
 }
 
-/* Print-only featured projects - Hidden on web */
-.featured-projects-print {
+/* Print-only elements - Hidden on web */
+.featured-projects-print,
+.header-print {
     display: none;
 }
 
