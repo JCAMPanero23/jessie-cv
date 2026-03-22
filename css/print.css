@@ -243,13 +243,12 @@
     }
 
     .workflow-step {
-        flex: 1;
+        flex: 1 1 0; /* Equal width distribution */
         padding: 8pt;
         background-color: white !important;
         border: 1px solid #D4A574 !important;
         border-radius: 6pt; /* Rounded corners for consistency */
-        min-height: 70pt;
-        max-height: 70pt; /* Force equal height */
+        min-height: 65pt;
         display: flex;
         flex-direction: column;
         align-items: center;
