@@ -12,6 +12,7 @@
 
     /* Hide web version elements */
     .header,
+    .ai-workflow,
     .btn-scroll-print,
     .print-section,
     .print-tip,
@@ -19,8 +20,9 @@
         display: none !important;
     }
 
-    /* Show print-only header */
-    .header-print {
+    /* Show print-only elements */
+    .header-print,
+    .ai-workflow-print {
         display: block !important;
     }
 
@@ -223,55 +225,76 @@
         margin-right: 4pt;
     }
 
-    /* AI Workflow */
-    .ai-workflow {
+    /* AI Workflow - Print Only Version */
+    .ai-workflow-print {
         background-color: #f8f8f8 !important;
         padding: 12pt;
-        page-break-before: auto;
-    }
-
-    .workflow-diagram {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-between;
-        align-items: stretch;
+        page-break-inside: avoid;
         margin-bottom: 10pt;
     }
 
-    .workflow-step {
+    .workflow-diagram-print {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10pt;
+        gap: 8pt;
+    }
+
+    .workflow-step-print {
         flex: 1;
         padding: 8pt;
-        background-color: white !important;
-        border: 1px solid #D4A574 !important;
-        margin: 0 3pt;
+        background-color: white;
+        border: 1px solid #D4A574;
+        min-height: 80pt;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .step-number {
-        background-color: #D4A574 !important;
-        color: white !important;
-        width: 30px;
-        height: 30px;
-        font-size: 14pt;
-    }
-
-    .step-title {
-        font-size: 10pt;
-        color: #1e293b !important;
-        font-weight: 500;
-    }
-
-    .step-description {
-        font-size: 8pt;
-        color: #4a4a4a !important; /* Darker gray for readability */
-    }
-
-    .workflow-arrow {
-        font-size: 18pt;
-        color: #D4A574 !important;
-        padding: 0 5pt;
+    .step-number-print {
+        background-color: #D4A574;
+        color: white;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
         display: flex;
         align-items: center;
-        align-self: center;
+        justify-content: center;
+        font-size: 13pt;
+        font-weight: bold;
+        margin-bottom: 6pt;
+    }
+
+    .step-title-print {
+        font-size: 10pt;
+        color: #1e293b;
+        font-weight: 600;
+        margin-bottom: 4pt;
+    }
+
+    .step-description-print {
+        font-size: 8pt;
+        color: #4a4a4a;
+        line-height: 1.4;
+    }
+
+    .workflow-arrow-print {
+        font-size: 20pt;
+        color: #D4A574;
+        flex-shrink: 0;
+        line-height: 1;
+    }
+
+    .workflow-note-print {
+        font-style: italic;
+        color: #4a4a4a;
+        font-size: 9pt;
+        line-height: 1.5;
+        padding-left: 12pt;
+        border-left: 3pt solid #D4A574;
     }
 
     /* Work Experience */

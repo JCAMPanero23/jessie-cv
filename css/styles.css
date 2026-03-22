@@ -893,7 +893,8 @@ button {
 
 /* Print-only elements - Hidden on web */
 .featured-projects-print,
-.header-print {
+.header-print,
+.ai-workflow-print {
     display: none;
 }
 
