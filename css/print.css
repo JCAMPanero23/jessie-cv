@@ -98,12 +98,13 @@
     }
 
     .contact-item a {
-        color: #D4A574 !important;
+        color: #ffffff !important; /* White for readability on dark background */
     }
 
     /* Profile photo on right side */
     .header-right {
         flex-shrink: 0;
+        flex-direction: row !important; /* Override column layout from web CSS */
     }
 
     .profile-photo {
