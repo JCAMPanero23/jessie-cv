@@ -12,7 +12,6 @@
 
     /* Hide web version elements */
     .header,
-    .ai-workflow,
     .btn-scroll-print,
     .print-section,
     .print-tip,
@@ -21,8 +20,7 @@
     }
 
     /* Show print-only elements */
-    .header-print,
-    .ai-workflow-print {
+    .header-print {
         display: block !important;
     }
 
@@ -225,72 +223,75 @@
         margin-right: 4pt;
     }
 
-    /* AI Workflow - Print Only Version */
-    .ai-workflow-print {
+    /* AI Workflow - Print Version */
+    .ai-workflow {
         background-color: #f8f8f8 !important;
         padding: 12pt;
         page-break-inside: avoid;
+        page-break-before: auto;
         margin-bottom: 10pt;
     }
 
-    .workflow-diagram-print {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+    .workflow-diagram {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
         margin-bottom: 10pt;
-        gap: 8pt;
+        gap: 6pt;
+        flex-wrap: nowrap !important;
     }
 
-    .workflow-step-print {
+    .workflow-step {
         flex: 1;
         padding: 8pt;
-        background-color: white;
-        border: 1px solid #D4A574;
-        min-height: 80pt;
+        background-color: white !important;
+        border: 1px solid #D4A574 !important;
+        min-height: 75pt;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .step-number-print {
-        background-color: #D4A574;
-        color: white;
-        width: 28px;
-        height: 28px;
+    .step-number {
+        background-color: #D4A574 !important;
+        color: white !important;
+        width: 26px;
+        height: 26px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 13pt;
+        font-size: 12pt;
         font-weight: bold;
-        margin-bottom: 6pt;
+        margin-bottom: 5pt;
     }
 
-    .step-title-print {
-        font-size: 10pt;
-        color: #1e293b;
+    .step-title {
+        font-size: 9pt;
+        color: #1e293b !important;
         font-weight: 600;
         margin-bottom: 4pt;
     }
 
-    .step-description-print {
+    .step-description {
         font-size: 8pt;
-        color: #4a4a4a;
-        line-height: 1.4;
+        color: #4a4a4a !important;
+        line-height: 1.3;
     }
 
-    .workflow-arrow-print {
-        font-size: 20pt;
-        color: #D4A574;
+    .workflow-arrow {
+        font-size: 18pt;
+        color: #D4A574 !important;
         flex-shrink: 0;
         line-height: 1;
+        align-self: center;
     }
 
-    .workflow-note-print {
+    .workflow-note {
         font-style: italic;
-        color: #4a4a4a;
+        color: #4a4a4a !important;
         font-size: 9pt;
         line-height: 1.5;
         padding-left: 12pt;
