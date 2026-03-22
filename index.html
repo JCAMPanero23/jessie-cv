@@ -526,40 +526,76 @@
         </div>
     </section>
 
-    <section class="portfolio-thumbnails">
+    <section class="work-categories">
         <div class="container">
-            <h2 class="section-title">Additional Work</h2>
-            <div class="thumbnails-grid">
+            <h2 class="section-title">Work Categories</h2>
+            <div class="categories-grid">
 
-                <figure class="thumbnail-item">
-                    <img src="images/portfolio/heritage-camp-p1.jpg" alt="Heritage Camp Phase 1" loading="lazy">
-                    <figcaption>Heritage Camp P1</figcaption>
-                </figure>
+                <!-- Card 1: Camp Designs -->
+                <article class="category-card" data-category="camps">
+                    <div class="card-deck-wrapper">
+                        <div class="preview-image">
+                            <img src="images/portfolio-gallery/camps/Elephant-rock-camp-01.jpg" alt="Camp Designs Preview - Elephant Rock Camp" loading="lazy">
+                        </div>
+                    </div>
+                    <h3 class="category-title">Camp Designs</h3>
+                    <p class="category-count">12 projects</p>
+                </article>
 
-                <figure class="thumbnail-item">
-                    <img src="images/portfolio/heritage-camp-p2.jpg" alt="Heritage Camp Phase 2" loading="lazy">
-                    <figcaption>Heritage Camp P2</figcaption>
-                </figure>
+                <!-- Card 2: Tethered Balloon Experiences -->
+                <article class="category-card" data-category="tetheredBalloons">
+                    <div class="card-deck-wrapper">
+                        <div class="preview-image">
+                            <img src="images/portfolio-gallery/balloons-tethered/desert-rock-balloon2.jpg" alt="Tethered Balloon Experiences Preview - Desert Rock" loading="lazy">
+                        </div>
+                    </div>
+                    <h3 class="category-title">Tethered Balloon Experiences</h3>
+                    <p class="category-count">6 projects</p>
+                </article>
 
-                <figure class="thumbnail-item">
-                    <img src="images/portfolio/desert-rock-balloon.jpg" alt="Desert Rock Tethered Balloon" loading="lazy">
-                    <figcaption>Desert Rock Tethered Balloon</figcaption>
-                </figure>
+                <!-- Card 3: Thermal Airship Proposals -->
+                <article class="category-card" data-category="thermalAirships">
+                    <div class="card-deck-wrapper">
+                        <div class="preview-image">
+                            <img src="images/portfolio-gallery/balloons-thermal/Hermes-airshipAtDesertRock_scene-2.jpg" alt="Thermal Airship Proposals Preview - Hermes Airship" loading="lazy">
+                        </div>
+                    </div>
+                    <h3 class="category-title">Thermal Airship Proposals</h3>
+                    <p class="category-count">6 projects</p>
+                </article>
 
-                <figure class="thumbnail-item">
-                    <img src="images/portfolio/dubai-balloon.jpg" alt="Dubai Balloon at Atlantis" loading="lazy">
-                    <figcaption>Dubai Balloon at Atlantis</figcaption>
-                </figure>
+                <!-- Card 4: Events -->
+                <article class="category-card" data-category="events">
+                    <div class="card-deck-wrapper">
+                        <div class="preview-image">
+                            <img src="images/portfolio-gallery/events-commercial/Citrix-(2).jpg" alt="Events Preview - Citrix Event" loading="lazy">
+                        </div>
+                    </div>
+                    <h3 class="category-title">Events</h3>
+                    <p class="category-count">4 projects</p>
+                </article>
 
-                <figure class="thumbnail-item">
-                    <img src="images/portfolio/thermal-balloon.jpg" alt="Thermal Balloon Experience" loading="lazy">
-                    <figcaption>Thermal Balloon Experience</figcaption>
-                </figure>
+                <!-- Card 5: Commercials -->
+                <article class="category-card" data-category="commercials">
+                    <div class="card-deck-wrapper">
+                        <div class="preview-image">
+                            <img src="images/portfolio-gallery/events-commercial/RK-Trends_jewelry-(1).jpg" alt="Commercials Preview - RK Trends Jewelry" loading="lazy">
+                        </div>
+                    </div>
+                    <h3 class="category-title">Commercials</h3>
+                    <p class="category-count">6 projects</p>
+                </article>
 
-                <figure class="thumbnail-item">
-                    <img src="images/portfolio/event-stall.jpg" alt="Event & Commercial Work" loading="lazy">
-                    <figcaption>Event & Commercial Work</figcaption>
-                </figure>
+                <!-- Card 6: Residential & Office Interiors -->
+                <article class="category-card" data-category="residential">
+                    <div class="card-deck-wrapper">
+                        <div class="preview-image">
+                            <img src="images/portfolio-gallery/Residential and office/Bedroom01.jpg" alt="Residential & Office Interiors Preview - Bedroom Design" loading="lazy">
+                        </div>
+                    </div>
+                    <h3 class="category-title">Residential & Office Interiors</h3>
+                    <p class="category-count">3 projects</p>
+                </article>
 
             </div>
         </div>
@@ -768,6 +804,28 @@
             </div>
         </div>
     </footer>
+
+    <!-- Gallery Modal -->
+    <div class="modal-gallery" id="galleryModal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title"></h2>
+                <button class="modal-close" aria-label="Close gallery">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="swiper gallery-swiper">
+                    <div class="swiper-wrapper"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper gallery-thumbs">
+                    <div class="swiper-wrapper"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 
