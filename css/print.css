@@ -44,12 +44,13 @@
         color: #D4A574 !important; /* Professional title in sand */
     }
 
-    /* Print-only Header - Clean layout with photo on right */
+    /* Print-only Header - Works with or without background graphics */
     .header-print {
-        background-color: #3a3a3a;
-        color: #ffffff;
+        background-color: #f5f5f5; /* Light gray background - always visible */
         padding: 12pt;
         margin-bottom: 10pt;
+        border: 2pt solid #1e293b;
+        border-bottom: 3pt solid #D4A574; /* Sand accent border */
     }
 
     .header-print-content {
@@ -64,7 +65,7 @@
     }
 
     .header-print-name {
-        color: #ffffff;
+        color: #1e293b; /* Dark slate - always readable */
         font-size: 20pt;
         font-weight: bold;
         margin: 0 0 4pt 0;
@@ -72,19 +73,20 @@
     }
 
     .header-print-title {
-        color: #D4A574;
+        color: #8B7355; /* Darker sand - professional */
         font-size: 10pt;
         margin: 0 0 6pt 0;
+        font-weight: 500;
     }
 
     .header-print-contact {
         font-size: 9pt;
-        color: #ffffff;
+        color: #4a4a4a; /* Medium gray - readable */
         line-height: 1.4;
     }
 
     .header-print-contact span {
-        color: #ffffff;
+        color: #4a4a4a;
         margin-right: 4pt;
     }
 
@@ -96,8 +98,9 @@
         width: 70px;
         height: 70px;
         border-radius: 50%;
-        border: 2px solid #D4A574;
+        border: 3px solid #D4A574; /* Sand border matches accent */
         object-fit: cover;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     /* Hero section - keep visible */
