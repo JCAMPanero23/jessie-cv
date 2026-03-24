@@ -450,11 +450,15 @@ button {
 .workflow-step {
     flex: 1;
     min-width: 200px;
+    min-height: 250px;
     padding: var(--spacing-lg);
     background-color: #ffffff;
     border-radius: var(--radius-lg);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .step-number {
